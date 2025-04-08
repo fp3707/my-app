@@ -1,19 +1,23 @@
+
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Header from "./components/Header"; // 헤더 컴포넌트를 import
+
+import Body from "./pages/Body";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
     <Router>
-      <Header /> {/* 헤더 컴포넌트를 추가 */}
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-      </Routes>
-    </Router>
-  );
-};
-
+    {/* 헤더 추가 */}
+    <Header />
+    {/* 메인 콘텐츠 영역 */}
+    <div>
+     <Body/> 
+    </div>
+    {/* 풋터 추가 */}
+    <Footer />
+</Router>
+  )
+}
 export default App;

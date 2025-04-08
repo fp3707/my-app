@@ -15,11 +15,11 @@ const Home = () => {
         { date: new Date(2025, 3, 10), open: 135, high: 145, low: 130, close: 140, volume: 1800 },
 
     ];
-      
+
+
 
   return (
     <div>
-      <h1>Welcome to Financial Charts</h1>
       <ChartComponent data={sampleData} />
     </div>
   );
